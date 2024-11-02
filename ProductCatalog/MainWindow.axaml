@@ -5,5 +5,14 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="ProductCatalog.MainWindow"
         Title="ProductCatalog">
-    Welcome to Avalonia!
+    <StackPanel>
+        <TextBox x:Name="SearchBar" Watermark="Wyszukaj produkt" TextChanged="SearchBar_OnTextChanged"/>
+        <ComboBox x:Name="MyComboBox" SelectionChanged="MyComboBox_OnSelectionChanged">
+            <ComboBoxItem Content="Wszystko"/>
+            <ComboBoxItem Content="Elektronika"/>
+            <ComboBoxItem Content="Narzędzia"/>
+            <ComboBoxItem Content="Książki"/>
+        </ComboBox>
+        <ListBox x:Name="MyListBox"/>
+    </StackPanel>
 </Window>
